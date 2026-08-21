@@ -36,7 +36,7 @@ export default function OpportunityMapping({ onBack }: Props) {
       </div>
 
       {/* ── Header ─────────────────────────────────────────────────── */}
-      <header className="sticky top-0 z-50 border-b flex items-center justify-between px-12 py-5"
+      <header className="sticky top-0 z-50 border-b flex items-center justify-between px-4 sm:px-12 py-4 sm:py-5 gap-3"
         style={{ background: "rgba(242,235,224,0.95)", borderColor: wBorder }}>
         <button
           onClick={onBack}
@@ -48,7 +48,7 @@ export default function OpportunityMapping({ onBack }: Props) {
             Back to Portfolio
           </span>
         </button>
-        <span className="text-base" style={{ fontFamily: monoF, letterSpacing: "-0.025em" }}>
+          <span className="text-base hidden sm:block" style={{ fontFamily: monoF, letterSpacing: "-0.025em" }}>
           Opportunity mapping
         </span>
         <button className="flex items-center gap-2 border px-3 py-1.5 hover:opacity-70 transition-opacity"
@@ -61,22 +61,22 @@ export default function OpportunityMapping({ onBack }: Props) {
       </header>
 
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <section className="border-b px-12 pb-20 pt-32" style={{ borderColor: wBorder }}>
+      <section className="border-b px-4 sm:px-12 pb-12 sm:pb-20 pt-16 sm:pt-32" style={{ borderColor: wBorder }}>
         <div className="max-w-[896px]">
-          <p className="text-[16px] tracking-[0.165em] uppercase mb-6"
+          <p className="text-[13px] sm:text-[16px] tracking-[0.165em] uppercase mb-6"
             style={{ fontFamily: monoF, color: crimson }}>
             Case Study — Opportunity Mapping
           </p>
           <h1 className="font-medium mb-8"
-            style={{ fontFamily: serif, fontSize: 96, lineHeight: "0.9em", letterSpacing: "-0.025em", color: ink }}>
+            style={{ fontFamily: serif, fontSize: "clamp(48px,8vw,96px)", lineHeight: "0.9em", letterSpacing: "-0.025em", color: ink }}>
             Opportunity mapping
           </h1>
           <p className="text-base leading-relaxed mb-8 max-w-[576px]" style={{ color: muted }}>
             Enabling product development through double diamond design principles — discovering the real constraints behind the product, defining the right problem, and building a solution that serves both users and the business.
           </p>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {["Workshop Facilitation", "Opportunity Mapping", "Product Strategy"].map((t) => (
-              <span key={t} className="border px-2.5 py-1 text-[12px] tracking-[0.04em] uppercase whitespace-nowrap"
+              <span key={t} className="border px-2.5 py-1 text-[12px] tracking-[0.04em] uppercase"
                 style={{ borderColor: wBorder, fontFamily: monoF, color: muted }}>
                 {t}
               </span>
@@ -86,7 +86,7 @@ export default function OpportunityMapping({ onBack }: Props) {
       </section>
 
       {/* ── Full-width image ────────────────────────────────────────── */}
-      <div className="bg-[#e6dcc8] w-full overflow-hidden" style={{ height: 468 }}>
+      <div className="bg-[#e6dcc8] w-full overflow-hidden" style={{ height: "clamp(200px, 40vw, 468px)" }}>
         <img src={imgClearance} alt="Opportunity mapping" className="w-full h-full object-cover" />
       </div>
 
@@ -111,8 +111,8 @@ export default function OpportunityMapping({ onBack }: Props) {
       </section>
 
       {/* ── Section 02 — My Work ───────────────────────────────────── */}
-      <section className="border-b px-12 py-24" style={{ borderColor: wBorder }}>
-        <div className="grid gap-24 max-w-[1152px]" style={{ gridTemplateColumns: "352px 1fr" }}>
+      <section className="border-b px-4 sm:px-12 py-12 sm:py-24" style={{ borderColor: wBorder }}>
+        <div className="grid gap-8 sm:gap-24 max-w-[1152px] grid-cols-1 sm:grid-cols-[352px_1fr]">
           <div className="pt-1">
             <p className="text-[12px] tracking-[0.167em] uppercase mb-2" style={{ fontFamily: monoF, color: faint }}>02</p>
             <p className="text-[16px] tracking-[0.135em] uppercase" style={{ fontFamily: monoF, color: crimson }}>My Work</p>
@@ -128,7 +128,7 @@ export default function OpportunityMapping({ onBack }: Props) {
             </div>
 
             {/* 3-pillar grid */}
-            <div className="grid grid-cols-3 gap-px" style={{ background: wBorder }}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px" style={{ background: wBorder }}>
               {[
                 { title: "Business goals", body: "Aligned with what the organisation needed to achieve commercially." },
                 { title: "User needs",     body: "Grounded in how people actually use the process today." },
@@ -159,7 +159,7 @@ export default function OpportunityMapping({ onBack }: Props) {
         </div>
       </section>
 
-      <footer className="px-12 py-6 flex justify-between items-center" style={{ borderTop: `1px solid ${wBorder}`, background: "rgba(242,235,224,0.7)" }}>
+      <footer className="px-4 sm:px-12 py-6 flex justify-between items-center flex-wrap gap-4" style={{ borderTop: `1px solid ${wBorder}`, background: "rgba(242,235,224,0.7)" }}>
         <span className="text-[11px]" style={{ fontFamily: monoF, color: faint }}>Case Study 01 · Opportunity Mapping</span>
         <span className="text-[11px]" style={{ fontFamily: monoF, color: faint }}>Design foundations</span>
       </footer>
