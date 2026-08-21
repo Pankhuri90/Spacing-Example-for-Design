@@ -511,7 +511,7 @@ function DiagramDropdownPanel({
 
 function EvolvedDropdownDiagram() {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-1">
       <div className="border border-black/10 rounded-xl p-6 bg-[#fafafa]">
         <DiagramDropdownPanel title="Beverages" showTable={true} />
       </div>
@@ -530,7 +530,7 @@ export default function App({ onBack }: { onBack?: () => void }) {
     <div className="min-h-screen" style={{ background: bg, color: ink, fontFamily: sansF }}>
 
       {/* ── Header ───────────────────────────────────────────────── */}
-      <header className="sticky top-0 z-50 border-b px-8 py-5 flex items-center justify-between" style={{ background: "rgba(242,235,224,0.95)", borderColor: wBorder }}>
+      <header className="sticky top-0 z-50 border-b px-4 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-4 flex-wrap" style={{ background: "rgba(242,235,224,0.95)", borderColor: wBorder }}>
         <div className="flex items-center gap-3">
           {onBack && page === "home" && (
             <button
@@ -567,7 +567,7 @@ export default function App({ onBack }: { onBack?: () => void }) {
         <span className="text-[11px]" style={{ fontFamily: monoF, color: faint }}>Case Study 03</span>
       </header>
 
-      <main className="max-w-5xl mx-auto px-8 py-16 space-y-16">
+      <main className="max-w-5xl mx-auto px-4 sm:px-8 py-8 sm:py-16 space-y-8 sm:space-y-16">
 
         {page === "home" && (
           <>
@@ -588,7 +588,7 @@ export default function App({ onBack }: { onBack?: () => void }) {
             {/* ── Carousel ───────────────────────────────────────────── */}
             <section>
               <p className="text-[11px] tracking-widest uppercase mb-8" style={{ fontFamily: monoF, color: faint }}>What were these trivial questions?</p>
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {/* Card 1 — Button Placement */}
                 <button
                   onClick={() => setPage("button-placement")}
@@ -685,7 +685,7 @@ export default function App({ onBack }: { onBack?: () => void }) {
               <strong style={{ color: ink }}>Feature Actions</strong>.
             </p>
 
-            <div className="grid grid-cols-2 gap-8 mb-12 items-stretch">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12 items-stretch">
               {/* Type 1 */}
               <div className="space-y-5 flex flex-col">
                 <div>
@@ -768,13 +768,13 @@ export default function App({ onBack }: { onBack?: () => void }) {
             </h3>
 
             {/* 3 pillars */}
-            <div className="grid grid-cols-3 gap-px mb-12" style={{ background: wBorder }}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px mb-12" style={{ background: wBorder }}>
               {[
                 { who: "Users", icon: "◎", body: "Consistent behaviour builds a mental model. When users know how a component works in one place, they don't have to relearn it in another. Inconsistency creates friction and erodes trust." },
                 { who: "Developers", icon: "⬡", body: "Defined variants mean reusable components. Instead of building bespoke versions of the same pattern, the team ships one component with two modes — and every page benefits automatically." },
                 { who: "Refinement", icon: "↻", body: "When behaviour is documented, discussions get faster. \"Which variant?\" is a one-sentence question with a one-sentence answer." },
               ].map((p, i) => (
-                <div key={p.who} className={`py-6 space-y-3 ${i === 0 ? "pr-6" : "px-6"}`} style={{ background: bg }}>
+                <div key={p.who} className="p-6 space-y-3" style={{ background: bg }}>
                   <div className="flex items-center gap-2">
                     <span className="text-xl" style={{ fontFamily: monoF, color: wBorder }}>{p.icon}</span>
                     <span className="text-[10px] tracking-widest uppercase" style={{ fontFamily: monoF, color: faint }}>Easier for</span>
@@ -791,7 +791,7 @@ export default function App({ onBack }: { onBack?: () => void }) {
 
             {/* Two live demos */}
             <p className="text-[11px] tracking-widest uppercase mb-6" style={{ fontFamily: monoF, color: faint }}>Two variants — try both</p>
-            <div className="grid grid-cols-2 gap-8 mb-10 items-stretch">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10 items-stretch">
               <div className="space-y-5 flex flex-col">
                 <div className="flex items-start justify-between">
                   <div>
@@ -837,7 +837,7 @@ export default function App({ onBack }: { onBack?: () => void }) {
             </div>
 
             {/* Decision guide */}
-            <div className="p-7 grid grid-cols-2 gap-8 border" style={{ background: "rgba(28,20,16,0.03)", borderColor: wBorder }}>
+            <div className="p-5 sm:p-7 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 border" style={{ background: "rgba(28,20,16,0.03)", borderColor: wBorder }}>
               <div>
                 <p className="font-medium text-base mb-3" style={{ fontFamily: serif, color: ink }}>Use Variant A when…</p>
                 <ul className="space-y-2 text-sm" style={{ color: muted }}>
@@ -894,7 +894,7 @@ export default function App({ onBack }: { onBack?: () => void }) {
 
       </main>
 
-      <footer className="border-t px-8 py-6 flex justify-between items-center" style={{ borderColor: wBorder, background: "rgba(242,235,224,0.7)" }}>
+      <footer className="border-t px-4 sm:px-8 py-6 flex justify-between items-center gap-4 flex-wrap" style={{ borderColor: wBorder, background: "rgba(242,235,224,0.7)" }}>
         <span className="text-[11px]" style={{ fontFamily: monoF, color: faint }}>Design Guidelines · Case Study 03</span>
         <span className="text-[11px]" style={{ fontFamily: monoF, color: faint }}>Design foundations</span>
       </footer>
