@@ -1,5 +1,5 @@
-const imgBackArrow  = "/assets/back-arrow.svg";
-const imgExportIcon = "/assets/export-icon.svg";
+import imgBackArrow  from "/public/assets/back-arrow.svg";
+import imgExportIcon from "/public/assets/export-icon.svg";
 
 const bg      = "#f2ebe0";
 const ink     = "#1c1410";

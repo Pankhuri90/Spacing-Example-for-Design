@@ -1,9 +1,9 @@
-const imgPortfolioPhoto = "/assets/portfolio-photo.png";
-const imgClearance    = "/assets/clearance.png";
-const imgDeals        = "/assets/deals.png";
-const imgWaypoint     = "/assets/waypoint.png";
-const imgArrowOut     = "/assets/arrow-out.svg";
-const imgArrow        = "/assets/arrow.svg";
+import imgPortfolioPhoto from "/public/assets/portfolio-photo.png";
+import imgClearance    from "/public/assets/clearance.png";
+import imgDeals        from "/public/assets/deals.png";
+import imgWaypoint     from "/public/assets/waypoint.png";
+import imgArrowOut     from "/public/assets/arrow-out.svg";
+import imgArrow        from "/public/assets/arrow.svg";
 
 const serif   = "'Playfair Display', serif";
 const mono    = "'DM Mono', monospace";
