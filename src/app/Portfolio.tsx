@@ -43,11 +43,11 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
 
       {/* ── Navbar ─────────────────────────────────────────────────── */}
       <nav
-        className="sticky top-0 z-50 flex items-center justify-between px-12 py-5 border-b"
+        className="sticky top-0 z-50 flex items-center justify-between px-4 sm:px-12 py-5 border-b"
         style={{ background: "rgba(242,235,224,0.95)", borderColor: border }}
       >
         <span style={{ fontFamily: mono, fontSize: 16, letterSpacing: "-0.025em" }}>Pankhuri Bedi</span>
-        <div className="flex items-center gap-10">
+        <div className="hidden sm:flex items-center gap-10">
           {["WORK", "ABOUT", "CONTACT"].map((l) => (
             <button key={l} className="text-sm tracking-widest uppercase hover:opacity-60 transition-opacity"
               style={{ fontFamily: mono, fontSize: 12, letterSpacing: "0.135em" }}>
@@ -64,7 +64,7 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
       </nav>
 
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden min-h-[calc(100vh-64px)] flex flex-col justify-end px-12 pb-20 pt-32">
+      <section className="relative overflow-hidden min-h-[calc(100vh-64px)] flex flex-col justify-end px-4 sm:px-12 pb-12 sm:pb-20 pt-20 sm:pt-32">
         {/* elliptical gradient from top-right, matching Figma gradientTransform matrix */}
         <div className="pointer-events-none absolute top-0 right-0 h-[600px]" style={{ width: "1024px" }}>
           <svg viewBox="0 0 1024 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-full">
@@ -108,12 +108,12 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
       </section>
 
       {/* ── About me ───────────────────────────────────────────────── */}
-      <section className="px-12 py-24">
-        <div className="border-t mb-16 pt-8 flex items-end justify-between" style={{ borderColor: border }}>
-          <h2 className="text-5xl font-medium" style={{ fontFamily: serif }}>About me</h2>
-          <span className="text-xs tracking-widest uppercase mb-1" style={{ fontFamily: mono, color: faint }}>Background</span>
+      <section className="px-4 sm:px-12 py-12 sm:py-24">
+        <div className="border-t mb-10 sm:mb-16 pt-8 flex items-end justify-between" style={{ borderColor: border }}>
+          <h2 className="text-4xl sm:text-5xl font-medium" style={{ fontFamily: serif }}>About me</h2>
+          <span className="text-xs tracking-widest uppercase mb-1 hidden sm:block" style={{ fontFamily: mono, color: faint }}>Background</span>
         </div>
-        <div className="grid gap-20" style={{ gridTemplateColumns: "465px 1fr" }}>
+        <div className="grid grid-cols-1 sm:grid-cols-[465px_1fr] gap-10 sm:gap-20">
           {/* Photo */}
           <div className="bg-[#e6dcc8] overflow-hidden">
             <img src={imgPortfolioPhoto} alt="Pankhuri Bedi" className="w-full h-full object-cover" style={{ maxHeight: 575 }} />
@@ -130,7 +130,7 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
               <p>Outside of work, you can call me a craft mom, i have a three old daughter who i try to keep busy with different craft projects — which, if I'm honest, I enjoy just as much as she does.</p>
             </div>
             {/* Location + Philosophy */}
-            <div className="border-t pt-6 grid grid-cols-2 gap-6" style={{ borderColor: border }}>
+            <div className="border-t pt-6 grid grid-cols-1 xs:grid-cols-2 gap-6" style={{ borderColor: border }}>
               <div>
                 <p className="text-2xl font-normal" style={{ fontFamily: serif }}>Location</p>
                 <p className="text-base mt-1" style={{ color: muted }}>Stuttgart</p>
@@ -154,19 +154,19 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
       </section>
 
       {/* ── A peek into how I work ──────────────────────────────────── */}
-      <section className="px-12 py-24">
-        <div className="border-t mb-16 pt-8" style={{ borderColor: border }}>
-          <h2 className="text-5xl font-medium" style={{ fontFamily: serif }}>A peek into how i work</h2>
+      <section className="px-4 sm:px-12 py-12 sm:py-24">
+        <div className="border-t mb-10 sm:mb-16 pt-8" style={{ borderColor: border }}>
+          <h2 className="text-4xl sm:text-5xl font-medium" style={{ fontFamily: serif }}>A peek into how i work</h2>
         </div>
-        <div className="flex gap-11 overflow-x-auto pb-2">
+        <div className="flex gap-6 sm:gap-11 overflow-x-auto pb-2">
 
           {/* Card 1 — Opportunity mapping */}
           <button
             onClick={onOpenOpportunityMapping}
-            className="border shrink-0 w-[400px] overflow-hidden text-left group hover:shadow-lg transition-shadow"
+            className="border shrink-0 w-[85vw] sm:w-[400px] overflow-hidden text-left group hover:shadow-lg transition-shadow"
             style={{ borderColor: border }}
           >
-            <div className="bg-[#e6dcc8] h-[306px] overflow-hidden">
+            <div className="bg-[#e6dcc8] h-[220px] sm:h-[306px] overflow-hidden">
               <img src={imgClearance} alt="Opportunity mapping" className="w-full h-full object-cover" />
             </div>
             <div className="border-l p-8 flex flex-col gap-4" style={{ borderColor: border }}>
@@ -183,10 +183,10 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
           {/* Card 2 — Design refactoring (navigates to Design Refactoring app) */}
           <button
             onClick={onOpenDesignRefactoring}
-            className="border shrink-0 w-[400px] overflow-hidden text-left group hover:shadow-lg transition-shadow"
+            className="border shrink-0 w-[85vw] sm:w-[400px] overflow-hidden text-left group hover:shadow-lg transition-shadow"
             style={{ borderColor: border }}
           >
-            <div className="bg-[#e6dcc8] h-[306px] overflow-hidden">
+            <div className="bg-[#e6dcc8] h-[220px] sm:h-[306px] overflow-hidden">
               <img src={imgDeals} alt="Design refactoring" className="w-full h-full object-cover" />
             </div>
             <div className="border-l p-8 flex flex-col gap-4" style={{ borderColor: border }}>
@@ -203,10 +203,10 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
           {/* Card 3 — Data validation */}
           <button
             onClick={onOpenDataValidation}
-            className="border shrink-0 w-[400px] overflow-hidden text-left group hover:shadow-lg transition-shadow"
+            className="border shrink-0 w-[85vw] sm:w-[400px] overflow-hidden text-left group hover:shadow-lg transition-shadow"
             style={{ borderColor: border }}
           >
-            <div className="bg-[#e6dcc8] h-[284px] overflow-hidden">
+            <div className="bg-[#e6dcc8] h-[220px] sm:h-[284px] overflow-hidden">
               <img src={imgWaypoint} alt="Data validation" className="w-full h-full object-cover" />
             </div>
             <div className="border-l p-8 flex flex-col gap-4" style={{ borderColor: border }}>
@@ -224,11 +224,11 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
       </section>
 
       {/* ── Core competency and services ───────────────────────────── */}
-      <section className="px-12 py-24">
-        <div className="border-t mb-16 pt-8" style={{ borderColor: border }}>
-          <h2 className="text-5xl font-medium" style={{ fontFamily: serif }}>Core competency and services</h2>
+      <section className="px-4 sm:px-12 py-12 sm:py-24">
+        <div className="border-t mb-10 sm:mb-16 pt-8" style={{ borderColor: border }}>
+          <h2 className="text-4xl sm:text-5xl font-medium" style={{ fontFamily: serif }}>Core competency and services</h2>
         </div>
-        <div className="grid grid-cols-3 gap-px" style={{ background: border }}>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-px" style={{ background: border }}>
           {[
             {
               n: "01", title: "Discovery and validation",
@@ -253,9 +253,9 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
       </section>
 
       {/* ── Work history and resume ─────────────────────────────────── */}
-      <section className="px-12 py-24">
-        <div className="border-t mb-16 pt-8" style={{ borderColor: border }}>
-          <h2 className="text-5xl font-medium" style={{ fontFamily: serif }}>Work history and resume</h2>
+      <section className="px-4 sm:px-12 py-12 sm:py-24">
+        <div className="border-t mb-10 sm:mb-16 pt-8" style={{ borderColor: border }}>
+          <h2 className="text-4xl sm:text-5xl font-medium" style={{ fontFamily: serif }}>Work history and resume</h2>
         </div>
         <div className="flex flex-col divide-y" style={{ borderColor: "#d8d1c7" }}>
           {[
@@ -278,13 +278,13 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
               body: "Worked as internal security auditor for ISO 27001, PCI DSS compliance."
             },
           ].map((j) => (
-            <div key={j.role} className="flex gap-12 py-8 border-b" style={{ borderColor: "#d8d1c7" }}>
-              <p className="shrink-0 w-52 text-base" style={{ fontFamily: mono, color: "#8f8f9b" }}>{j.dates}</p>
+            <div key={j.role} className="flex flex-col sm:flex-row gap-2 sm:gap-12 py-8 border-b" style={{ borderColor: "#d8d1c7" }}>
+              <p className="shrink-0 sm:w-52 text-base" style={{ fontFamily: mono, color: "#8f8f9b" }}>{j.dates}</p>
               <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <p className="text-xl font-bold whitespace-nowrap" style={{ fontFamily: serif, color: "#111112" }}>{j.role}</p>
+                <div className="flex flex-wrap items-center gap-2">
+                  <p className="text-xl font-bold" style={{ fontFamily: serif, color: "#111112" }}>{j.role}</p>
                   <span className="w-1 h-1 rounded-full shrink-0" style={{ background: crimson }} />
-                  <p className="text-base whitespace-nowrap" style={{ fontFamily: mono, color: crimson }}>{j.company}</p>
+                  <p className="text-base" style={{ fontFamily: mono, color: crimson }}>{j.company}</p>
                 </div>
                 <p className="text-[15px] leading-relaxed" style={{ color: "#52525b" }}>{j.body}</p>
               </div>
@@ -294,7 +294,7 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
       </section>
 
       {/* ── CTA footer ─────────────────────────────────────────────── */}
-      <section className="border-t flex flex-col items-center text-center py-32 px-12" style={{ borderColor: border }}>
+      <section className="border-t flex flex-col items-center text-center py-16 sm:py-32 px-4 sm:px-12" style={{ borderColor: border }}>
         <p className="text-[10px] tracking-[0.25em] uppercase mb-8" style={{ fontFamily: mono, color: crimson }}>
           Get in touch
         </p>
