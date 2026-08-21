@@ -1,4 +1,4 @@
-import imgPortfolioPhoto from "/public/assets/portfolio-photo.png";
+
 import imgClearance    from "/public/assets/clearance.png";
 import imgDeals        from "/public/assets/deals.png";
 import imgWaypoint     from "/public/assets/waypoint.png";
@@ -114,9 +114,12 @@ export default function Portfolio({ onOpenDesignRefactoring, onOpenOpportunityMa
           <span className="text-xs tracking-widest uppercase mb-1 hidden sm:block" style={{ fontFamily: mono, color: faint }}>Background</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-[465px_1fr] gap-10 sm:gap-20">
-          {/* Photo */}
-          <div className="bg-[#e6dcc8] overflow-hidden">
-            <img src={imgPortfolioPhoto} alt="Pankhuri Bedi" className="w-full h-full object-cover" style={{ maxHeight: 575 }} />
+          {/* Avatar placeholder */}
+          <div className="bg-[#e6dcc8] overflow-hidden flex items-center justify-center" style={{ minHeight: 360 }}>
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-40 h-40 opacity-30">
+              <circle cx="100" cy="75" r="40" fill="#1c1410" />
+              <ellipse cx="100" cy="175" rx="65" ry="50" fill="#1c1410" />
+            </svg>
           </div>
           {/* Bio */}
           <div className="flex flex-col gap-7">
